@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<header class="ui large top fixed inverted menu">
+  <div class="header item">SteamScore</div>
+  {{#link-to "home" class="item"}}Home{{/link-to}}
+  {{#link-to "games" class="item"}}Games{{/link-to}}
+  <div class="right menu">
+    <div class="item">
+      <div class="ui primary button">Sign In</div>
+    </div>
+  </div>
+</header>
+<main>{{outlet}}</main>
+<footer class="footer ui inverted vertical segment">
+  <div class="ui container">
+    <p>{{{copyright "SteamScore.info"}}}. Powered by <a href="https://github.com/SteamScore/web" target="_blank">steamscore/web</a> ({{app-version}}). Licensed under <a href="https://www.mozilla.org/en-US/MPL/2.0/" target="_blank">Mozilla Public License 2.0</a>.</p>
+    <p>This site is not affiliated with Valve, Steam, or any of their partners. All copyrights reserved to their respective owners.</p>
+  </div>
+</footer>
